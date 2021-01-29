@@ -1,8 +1,20 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Vuetify from 'vuetify'
 
-Vue.config.productionTip = false
+import router from '@/router.js'
+import App from '@/App.vue'
+import store from '@/store/index.js';
+import BaseCard from '@/components/ui/BaseCard.vue';
+import BaseBadge from '@/components/ui/BaseBadge.vue';
+
+Vue.component('base-card', { BaseCard })
+Vue.component('base-badge', { BaseBadge })
+
+Vue.use(Vuetify);
 
 new Vue({
-  render: h => h(App),
+    vuetify: new Vuetify(),
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
