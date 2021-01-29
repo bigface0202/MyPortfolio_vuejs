@@ -39,6 +39,8 @@ ul {
 
 li {
   margin: 0 2rem;
+  color: white;
+  font-weight: bold;
 }
 
 a {

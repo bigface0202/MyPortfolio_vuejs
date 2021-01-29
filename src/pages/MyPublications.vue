@@ -1,60 +1,69 @@
 <template>
-  <div>
-    <h2>Publications</h2>
+  <section class="publications">
     <section>
       <publication-filter @change-filter="setFilters"></publication-filter>
     </section>
-    <ul>
-      <base-card v-if="activeFilters.paper">
-        <h2>Journal Paper</h2>
-        <publication-item
-          v-for="pub in paper"
-          :key="pub.id"
-          :id="pub.id"
-          :title="pub.title"
-          :authors="pub.authors"
-          :publisher="pub.publisher"
-          :year="pub.year"
-          :firstAuthor="pub.firstAuthor"
-          :doi="pub.doi"
-        ></publication-item>
-      </base-card>
-      <base-card v-if="activeFilters.conf_i">
-        <h2>International Conference</h2>
-        <publication-item
-          v-for="pub in internationalConf"
-          :key="pub.id"
-          :id="pub.id"
-          :title="pub.title"
-          :authors="pub.authors"
-          :publisher="pub.publisher"
-          :year="pub.year"
-          :firstAuthor="pub.firstAuthor"
-          :doi="pub.doi"
-        ></publication-item>
-      </base-card>
-      <base-card v-if="activeFilters.conf_j">
-        <h2>Domestic Conference</h2>
-        <publication-item
-          v-for="pub in domesticConf"
-          :key="pub.id"
-          :id="pub.id"
-          :title="pub.title"
-          :authors="pub.authors"
-          :publisher="pub.publisher"
-          :year="pub.year"
-          :firstAuthor="pub.firstAuthor"
-          :doi="pub.doi"
-        ></publication-item>
-      </base-card>
-    </ul>
-  </div>
+    <v-container class="publications__content">
+      <ul>
+          <v-row>
+            <v-col>
+              <base-card v-if="activeFilters.paper">
+                <h2>Journal Paper</h2>
+                <publication-item
+                  v-for="pub in paper"
+                  :key="pub.id"
+                  :id="pub.id"
+                  :title="pub.title"
+                  :authors="pub.authors"
+                  :publisher="pub.publisher"
+                  :year="pub.year"
+                  :firstAuthor="pub.firstAuthor"
+                  :doi="pub.doi"
+                ></publication-item>
+              </base-card>
+            </v-col>
+            <v-col>
+              <base-card v-if="activeFilters.conf_i">
+                <h2>International Conference</h2>
+                <publication-item
+                  v-for="pub in internationalConf"
+                  :key="pub.id"
+                  :id="pub.id"
+                  :title="pub.title"
+                  :authors="pub.authors"
+                  :publisher="pub.publisher"
+                  :year="pub.year"
+                  :firstAuthor="pub.firstAuthor"
+                  :doi="pub.doi"
+                ></publication-item>
+              </base-card>
+            </v-col>
+            <v-col>
+              <base-card v-if="activeFilters.conf_j">
+                <h2>Domestic Conference</h2>
+                <publication-item
+                  v-for="pub in domesticConf"
+                  :key="pub.id"
+                  :id="pub.id"
+                  :title="pub.title"
+                  :authors="pub.authors"
+                  :publisher="pub.publisher"
+                  :year="pub.year"
+                  :firstAuthor="pub.firstAuthor"
+                  :doi="pub.doi"
+                ></publication-item>
+              </base-card>
+            </v-col>
+          </v-row>
+      </ul>
+    </v-container>
+  </section>
 </template>
 
 <script>
 import PublicationItem from "@/components/publications/PublicationItem.vue";
 import PublicationFilter from "@/components/publications/PublicationsFilter.vue";
-import BaseCard from '@/components/ui/BaseCard.vue';
+import BaseCard from "@/components/ui/BaseCard.vue";
 
 export default {
   components: {
@@ -109,10 +118,14 @@ export default {
 </script>
 
 <style scoped>
+.publications__content {
+  width: 100%;
+}
+
 ul {
   list-style: none;
   margin: 2rem auto;
   padding: 0;
-  max-width: 40rem;
+  /* max-width: rem; */
 }
 </style>
