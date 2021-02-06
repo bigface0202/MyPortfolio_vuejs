@@ -23,21 +23,26 @@ Vue.use(Router)
 const router = new Router({
     mode: 'history',
     routes: [
-        { path: '/', redirect: '/profile' },
+        { path: '/', redirect: '/home' },
+        {
+            name: 'home',
+            path: '/home',
+            component: require('@/views/Home.vue').default
+        },
         {
             name: 'profile',
             path: '/profile',
-            component: require('@/pages/MyProfile.vue').default
+            component: require('@/views/MyProfile.vue').default
         },
         {
             name: 'publications',
             path: '/publications',
-            component: require('@/pages/MyPublications.vue').default
+            component: require('@/views/MyPublications.vue').default
         },
         {
             name: 'works',
             path: '/works',
-            component: require('@/pages/MyWorks.vue').default
+            component: require('@/views/MyWorks.vue').default
         }
     ]
 })

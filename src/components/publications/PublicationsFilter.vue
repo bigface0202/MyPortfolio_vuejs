@@ -1,6 +1,7 @@
 <template>
-  <base-card>
-    <h2>Find My Publications</h2>
+  <v-card outlined>
+    <v-card-title>Find My Publications</v-card-title>
+    <v-card-text >
     <span class="filter-option">
       <input type="checkbox" id="paper" checked @change="setFilter" />
       <label for="paper">Journal Paper (International)</label>
@@ -13,13 +14,12 @@
       <input type="checkbox" id="conf_j" checked @change="setFilter" />
       <label for="conf_j">Conference Paper (Japanese)</label>
     </span>
-  </base-card>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
-import BaseCard from '../ui/BaseCard.vue';
 export default {
-  components: { BaseCard },
   emits: ["change-filter"],
   data() {
     return {

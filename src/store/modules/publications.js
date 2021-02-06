@@ -340,8 +340,5 @@ export default{
         publications(state) {
             return state.publications;
         },
-        pubType(state){
-            return state.pubType;
-        }
     }
 }

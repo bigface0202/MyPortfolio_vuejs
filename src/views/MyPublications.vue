@@ -1,14 +1,19 @@
 <template>
   <section class="publications">
-    <section>
-      <publication-filter @change-filter="setFilters"></publication-filter>
-    </section>
-    <v-container class="publications__content">
+    <v-container fluid>
       <ul>
+        <v-row>
+          <v-col md=6>
+          </v-col>
+          <v-col md=6>
+            <publication-filter @change-filter="setFilters"></publication-filter>
+          </v-col>
+        </v-row>
           <v-row>
-            <v-col>
-              <base-card v-if="activeFilters.paper">
-                <h2>Journal Paper</h2>
+            <v-col md=4>
+              <v-card outlined v-if="activeFilters.paper">
+                <v-card-title>Journal Paper</v-card-title>
+                <v-card-text>
                 <publication-item
                   v-for="pub in paper"
                   :key="pub.id"
@@ -20,11 +25,13 @@
                   :firstAuthor="pub.firstAuthor"
                   :doi="pub.doi"
                 ></publication-item>
-              </base-card>
+                </v-card-text>
+              </v-card>
             </v-col>
-            <v-col>
-              <base-card v-if="activeFilters.conf_i">
-                <h2>International Conference</h2>
+            <v-col md=4>
+              <v-card outlined v-if="activeFilters.conf_i">
+                <v-card-title>International Conference</v-card-title>
+                <v-card-text>
                 <publication-item
                   v-for="pub in internationalConf"
                   :key="pub.id"
@@ -36,11 +43,13 @@
                   :firstAuthor="pub.firstAuthor"
                   :doi="pub.doi"
                 ></publication-item>
-              </base-card>
+                </v-card-text>
+              </v-card>
             </v-col>
-            <v-col>
-              <base-card v-if="activeFilters.conf_j">
-                <h2>Domestic Conference</h2>
+            <v-col md=4>
+              <v-card outlined v-if="activeFilters.conf_j">
+                <v-card-title>Domestic Conference</v-card-title>
+                <v-card-text>
                 <publication-item
                   v-for="pub in domesticConf"
                   :key="pub.id"
@@ -52,7 +61,8 @@
                   :firstAuthor="pub.firstAuthor"
                   :doi="pub.doi"
                 ></publication-item>
-              </base-card>
+                </v-card-text>
+              </v-card>
             </v-col>
           </v-row>
       </ul>
@@ -63,13 +73,11 @@
 <script>
 import PublicationItem from "@/components/publications/PublicationItem.vue";
 import PublicationFilter from "@/components/publications/PublicationsFilter.vue";
-import BaseCard from "@/components/ui/BaseCard.vue";
 
 export default {
   components: {
     PublicationItem,
     PublicationFilter,
-    BaseCard,
   },
   data() {
     return {

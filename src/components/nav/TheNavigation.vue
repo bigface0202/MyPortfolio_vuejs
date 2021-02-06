@@ -1,63 +1,63 @@
 <template>
   <header>
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/profile">Profile</router-link>
-        </li>
-        <li>
-          <router-link to="/publications">Publications</router-link>
-        </li>
-        <li>
-          <router-link to="/works">Works</router-link>
-        </li>
-      </ul>
-    </nav>
+    <v-app-bar app dark >
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-toolbar-title>y-ksst</v-toolbar-title>
+      <v-tabs dark>
+        <v-tab
+          v-for="(navItem, index) in navItems"
+          :key="index"
+          :to="navItem.url"
+        >
+          {{ navItem.name }}
+        </v-tab>
+      </v-tabs>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" temporary fixed>
+      <v-list nav flat>
+        <v-list-item-group>
+          <v-list-item
+            v-for="(navItem, index) in navItems"
+            :key="index"
+            :to="navItem.url"
+          >
+            <v-list-item-title>{{ navItem.name }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
   </header>
 </template>
 
-<style scoped>
-header {
-  width: 100%;
-  height: 5rem;
-  background-color: #11005c;
+<script>
+import constants from "./constants.js";
+
+export default {
+  data() {
+    return {
+      drawer: false,
+      navItems: constants.navItems,
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.v-toolbar__title{
+  overflow: visible !important;
+  margin-right: 50px !important;
 }
 
-nav {
-  height: 100%;
+.v-app-bar__nav-icon {
+  @include display_pc {
+    display: none !important;
+  }
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-li {
-  margin: 0 2rem;
-  color: white;
-  font-weight: bold;
-}
-
-a {
-  text-decoration: none;
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  display: inline-block;
-}
-
-a:hover,
-a:active,
-a.active {
-  color: #f1a80a;
-  border-color: #f1a80a;
-  background-color: #1a037e;
+.v-tabs {
+  display: none;
+  @include display_pc {
+    display: block !important;
+  }
 }
 </style>
