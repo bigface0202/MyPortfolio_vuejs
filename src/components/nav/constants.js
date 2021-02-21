@@ -2,7 +2,7 @@ export default {
     navItems: [
         {
             name: 'HOME',
-            url: '/'
+            url: '/home'
         },
         {
             name: 'PROFILE',

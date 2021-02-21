@@ -1,5 +1,5 @@
 <template>
-<v-app id="app">
+<v-app id="app" class="main">
   <the-navigation />
   <v-main>
   <router-view />
@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+.main{
+  background-color: #91c8fc !important;
+}
 * {
   box-sizing: border-box;
 }

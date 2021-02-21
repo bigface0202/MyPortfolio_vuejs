@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined>
+  <v-card flat>
     <v-card-title>Find My Publications</v-card-title>
     <v-card-text >
     <span class="filter-option">
@@ -39,8 +39,6 @@ export default {
         [inputId]: isActive,
       };
       this.filters = updatedFilters;
-      console.log(inputId);
-      console.log(isActive);
       this.$emit("change-filter", updatedFilters);
     },
   },

@@ -1,8 +1,6 @@
 <template>
 <section class="my-timeline">
-    <div class="section__title">
-      <div class="section__title-text">About My Career</div>
-    </div>
+    <div class="my-timeline__title">About My Career</div>
     <my-time-line-item class="my-timeline__contents"
       v-for="tl in timeline"
       :key="tl.id"
@@ -29,7 +27,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.my-timeline{
+  &__title{
+    text-align: left;
+    font-size: 32px
+  }
+  &__contents{
+    margin-top:20px;
+  }
+}
 .my-timeline__contents{
-  margin-top:20px;
+  
 }
 </style>

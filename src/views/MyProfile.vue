@@ -1,16 +1,14 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col>
-        <v-card class="mx-auto" outlined>
-          <about-me></about-me>
-          <about-my-skill></about-my-skill>
-        </v-card>
+      <v-col class="my-profile">
+        <about-me></about-me>
+        <about-my-skill></about-my-skill>
       </v-col>
+    </v-row>
+    <v-row>
       <v-col>
-        <v-card class="mx-auto" outlined>
-          <my-time-line></my-time-line>
-        </v-card>
+        <my-time-line></my-time-line>
       </v-col>
     </v-row>
   </v-container>
@@ -19,15 +17,18 @@
 <script>
 import MyTimeLine from "@/components/timeline/MyTimeLine.vue";
 import AboutMe from "@/components/about/AboutMe.vue";
-import AboutMySkill from '../components/about/AboutMySkill.vue';
+import AboutMySkill from "../components/about/AboutMySkill.vue";
 export default {
   components: {
     MyTimeLine,
     AboutMe,
-    AboutMySkill
+    AboutMySkill,
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.my-profile {
+  margin: 10px 10px 10px;
+}
 </style>

@@ -1,9 +1,12 @@
 <template>
-  <header>
-    <v-app-bar app dark >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title>y-ksst</v-toolbar-title>
-      <v-tabs dark>
+  <header class="header">
+    <v-card class="header__card" flat>
+       <v-card-title class="text-center justify-center py-6">
+        <p class="header__title__text">
+          y-kissy
+        </p>
+      </v-card-title>
+      <v-tabs right background-color="transparent" class="header__nav" grow>
         <v-tab
           v-for="(navItem, index) in navItems"
           :key="index"
@@ -12,20 +15,7 @@
           {{ navItem.name }}
         </v-tab>
       </v-tabs>
-    </v-app-bar>
-    <v-navigation-drawer v-model="drawer" temporary fixed>
-      <v-list nav flat>
-        <v-list-item-group>
-          <v-list-item
-            v-for="(navItem, index) in navItems"
-            :key="index"
-            :to="navItem.url"
-          >
-            <v-list-item-title>{{ navItem.name }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
+    </v-card>
   </header>
 </template>
 
@@ -43,21 +33,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-toolbar__title{
-  overflow: visible !important;
-  margin-right: 50px !important;
-}
-
-.v-app-bar__nav-icon {
-  @include display_pc {
-    display: none !important;
+.header{
+  &__card {
+    background-color: #C3E2FF !important;
   }
-}
-
-.v-tabs {
-  display: none;
-  @include display_pc {
-    display: block !important;
+  &__title {
+    text-align: center;
+    background-color: #C3E2FF !important;
+    &__text {
+      color: #4a47a3 !important;
+    }
+  }
+  &__nav {
+    background-color: #C3E2FF !important;
+    &__text{
+      color: #4a47a3 !important;
+    }
   }
 }
 </style>

@@ -4,14 +4,12 @@
       <ul>
         <v-row>
           <v-col md=6>
-          </v-col>
-          <v-col md=6>
             <publication-filter @change-filter="setFilters"></publication-filter>
           </v-col>
         </v-row>
           <v-row>
             <v-col md=4>
-              <v-card outlined v-if="activeFilters.paper">
+              <v-card v-if="activeFilters.paper" flat>
                 <v-card-title>Journal Paper</v-card-title>
                 <v-card-text>
                 <publication-item
@@ -29,7 +27,7 @@
               </v-card>
             </v-col>
             <v-col md=4>
-              <v-card outlined v-if="activeFilters.conf_i">
+              <v-card v-if="activeFilters.conf_i" flat>
                 <v-card-title>International Conference</v-card-title>
                 <v-card-text>
                 <publication-item
@@ -47,7 +45,7 @@
               </v-card>
             </v-col>
             <v-col md=4>
-              <v-card outlined v-if="activeFilters.conf_j">
+              <v-card v-if="activeFilters.conf_j" flat>
                 <v-card-title>Domestic Conference</v-card-title>
                 <v-card-text>
                 <publication-item

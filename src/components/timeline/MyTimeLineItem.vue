@@ -15,7 +15,7 @@
           </v-card-title>
           <v-container>
             <v-row>
-              <v-col cols="1" md="10">{{ school }}{{ description }}</v-col>
+              <v-col md="12">{{ school }}{{ description }}</v-col>
             </v-row>
           </v-container>
         </v-card>

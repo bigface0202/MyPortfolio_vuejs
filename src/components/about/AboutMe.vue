@@ -1,22 +1,28 @@
 <template>
   <section class="about-me">
-    <div class="section__title">
-      <div class="section__title-text">About Me</div>
-    </div>
     <v-container>
       <v-row class="about-me__contents">
-        <v-col md="5" class="about-me__contents-img">
-          <img src="@/assets/img/me3.png" alt="" class="img-fluid" />
+        <v-col md="3" class="about-me__contents-img">
+          <v-img :src="require('@/assets/img/me3.png')"></v-img>
         </v-col>
-        <v-col md="5" class="about-me__contents-text">
-          <p>
-            初めまして！岸下優介（Yusuke
-            Kishishita）です。今は東京都内で深層学習・機械学習・IoTエンジニア兼ミャンマーのエンジニアチームのPMをやっております。
-          </p>
-          <p>
-            2020年3月までは広島大学生体システム論研究室で博士課程に所属しており、人間に関する研究（主に触覚や力覚・筋感覚などの知覚）を行っておりました。
-          </p>
-          <p>人間に対する（主に筋肉）理解を深めていきたい所存であります。</p>
+        <v-col md="9" class="about-me__contents-text">
+          <v-card flat>
+            <v-card-title>
+              About Me
+            </v-card-title>
+            <v-card-text>
+              <p class="about-me__text">
+                初めまして！岸下優介（Yusuke Kishishita）と申します。
+                今は東京都内で機械学習エンジニア兼ミャンマーのエンジニアチームとの共同プロジェクトをやっております。
+              </p>
+              <p class="about-me__text">
+                2020年3月までは広島大学生体システム論研究室で博士課程に所属しており、人間に関する研究（主に触覚や力覚・筋感覚などの知覚）を行っておりました。
+              </p>
+              <p class="about-me__text">
+                人間に対する（主に筋肉）理解を深めていきたい所存であります。
+              </p>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -26,15 +32,24 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-.about-me__contents {
-  margin-top: 20px;
-  justify-content: center;
-
-  &-img {
-    text-align: center;
+.about-me {
+  &__title {
+    text-align: left;
+    font-size: 32px;
   }
-  &-text {
-    word-wrap: break-word;
+  &__text {
+    margin: 20px 20px 20px;
+  }
+  &__contents {
+    margin-top: 20px;
+    justify-content: center;
+
+    &-img {
+      text-align: center;
+    }
+    &-text {
+      word-wrap: break-word;
+    }
   }
 }
 </style>
