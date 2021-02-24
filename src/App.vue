@@ -27,9 +27,14 @@ export default {
 
 html {
   font-family: sans-serif;
+  font-size: 15px;
 }
 
 body {
   margin: 0;
+}
+
+.v-application{
+    font-family: "M Plus 1p" !important;
 }
 </style>

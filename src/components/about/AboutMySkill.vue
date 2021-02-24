@@ -58,7 +58,7 @@ export default {};
 .about-my-skill{
   &__title{
     text-align: left;
-    font-size: 32px
+    font-size: 3.2rem;
   }
   &__contents{
     margin-top: 20px;

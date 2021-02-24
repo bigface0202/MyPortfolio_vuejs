@@ -19,12 +19,12 @@
   width: 100%;
   height: 75vh;
   @include display_pc {
-    font-size: 40px;
+    font-size: 4.0rem;
   }
 
   &__text {
     color: black;
-    font-size: 28px;
+    font-size: 2.8rem;
     vertical-align: bottom;
 
     // @include display_pc {
@@ -34,6 +34,6 @@
 }
 .home-hero__notes{
   text-align: right;
-  font-size: 5px;
+  font-size: 0.5px;
 }
 </style>
