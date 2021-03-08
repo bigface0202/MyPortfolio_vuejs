@@ -13,18 +13,18 @@
 </template>
 <style lang="scss" scoped>
 .home-hero__content {
-  background: url("../assets/img/winter_mountain.png");
-  background-size: cover;
-  background-position: center center;
   width: 100%;
   height: 75vh;
-  @include display_pc {
-    font-size: 4.0rem;
-  }
+  background: url("../assets/img/winter_mountain.png");
+  background-position: center center;
+  background-size: cover;
 
+  @include display_pc {
+    font-size: 4rem;
+  }
   &__text {
-    color: black;
     font-size: 2.8rem;
+    color: black;
     vertical-align: bottom;
 
     // @include display_pc {
@@ -32,8 +32,9 @@
     // }
   }
 }
-.home-hero__notes{
-  text-align: right;
+
+.home-hero__notes {
   font-size: 0.5px;
+  text-align: right;
 }
 </style>
