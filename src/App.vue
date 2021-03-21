@@ -23,7 +23,7 @@ export default {
 <style lang="scss">
 html {
   font-family: sans-serif;
-  font-size: 10px !important;
+  font-size: 15px;
 }
 
 .portfolio{
@@ -43,5 +43,9 @@ html {
   /* サイドバーで隠れるので右に寄せる */
   margin: 0 0 0 180px;
   }
+}
+
+.v-application{
+    font-family: "M Plus 1p" !important;
 }
 </style>

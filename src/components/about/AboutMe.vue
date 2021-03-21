@@ -35,7 +35,7 @@ export default {};
 .about-me {
   &__title {
     text-align: left;
-    font-size: 32px;
+    font-size: 3.2rem;
   }
   &__text {
     margin: 20px 20px 20px;

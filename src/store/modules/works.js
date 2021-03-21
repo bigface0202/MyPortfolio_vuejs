@@ -51,7 +51,7 @@ export default {
               {
                 id: 't5',
                 title: 'Hotdog or Not Hotdog',
-                assets: 'Flutter',
+                assets: 'Flutter, TFLite',
                 description: 'シリコンバレー（ドラマ）をご存知の方なら知ってる、チェン・イェンのアプリです。\
                               TFLiteを使ってホットドッグの画像を学習させて、識別できるようにしました',
                 image: require('@/assets/img/hotdog.png'),
@@ -62,7 +62,7 @@ export default {
               {
                 id: 't6',
                 title: 'PoseEstimation on Mobile',
-                assets: 'Flutter',
+                assets: 'Flutter, TFLite',
                 description: 'TFLiteのPoseNetモデルを使って、Flutterで姿勢推定アプリを作りました。',
                 image: require('@/assets/img/pose_estimation.png'),
                 articleName:'Qiita記事',
