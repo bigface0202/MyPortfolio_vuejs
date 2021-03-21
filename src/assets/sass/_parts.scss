@@ -1,14 +1,13 @@
-.section__title{
-    padding-top: 120px;
-    text-align: center;
-
-    &-text{
-        font-weight:700;
-        font-size:40px;
-        color: #4a47a3;
-    }
+.section__title {
+  padding-top: 120px;
+  text-align: center;
+  &-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: #4a47a3;
+  }
 }
 
-.img-fluid{
-    max-width: 100%;
+.img-fluid {
+  max-width: 100%;
 }

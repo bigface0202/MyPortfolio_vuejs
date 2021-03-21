@@ -15,16 +15,16 @@
 </template>
 
 <script>
-import MyTimeLine from "@/components/timeline/MyTimeLine.vue";
-import AboutMe from "@/components/about/AboutMe.vue";
-import AboutMySkill from "../components/about/AboutMySkill.vue";
+import MyTimeLine from '@/components/timeline/MyTimeLine.vue'
+import AboutMe from '@/components/about/AboutMe.vue'
+import AboutMySkill from '../components/about/AboutMySkill.vue'
 export default {
   components: {
     MyTimeLine,
     AboutMe,
-    AboutMySkill,
-  },
-};
+    AboutMySkill
+  }
+}
 </script>
 
 <style lang="scss" scoped>

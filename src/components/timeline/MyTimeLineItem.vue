@@ -6,8 +6,7 @@
         v-bind:color="color"
         small
         :left="!isRight(side)"
-        :right="isRight(side)"
-      >
+        :right="isRight(side)">
         <v-card>
           <v-card-title v-bind:class="color">
             <v-icon dark size="32" class="mr-4">{{ icon }}</v-icon>
@@ -25,27 +24,27 @@
 </template>
 <script>
 export default {
-  props: ["id", "year", "school", "description", "icon", "color", "side"],
+  props: ['id', 'year', 'school', 'description', 'icon', 'color', 'side'],
   methods: {
-    isRight(side) {
-      if (side === "right") {
-        return true;
+    isRight (side) {
+      if (side === 'right') {
+        return true
       } else {
-        return false;
+        return false
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 h4 {
-  color: white;
   font-weight: light;
-  
+  color: white;
 }
+
 p {
-  color: white;
-  font-weight: light;
   padding-right: 10%;
+  font-weight: light;
+  color: white;
 }
 </style>

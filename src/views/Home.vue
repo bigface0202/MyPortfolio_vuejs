@@ -1,20 +1,20 @@
 <template>
-    <section class="home">
-        <HomeHero/>
-    </section>
+  <section class="home">
+    <HomeHero/>
+  </section>
 </template>
 <script>
-import HomeHero from '@/components/HomeHero.vue';
+import HomeHero from '@/components/HomeHero.vue'
 
 export default {
-    components:{
-        HomeHero
-    }
+  components: {
+    HomeHero
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .home {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 </style>

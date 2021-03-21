@@ -25,16 +25,16 @@
 <script>
 export default {
   data: () => ({
-    show: false,
+    show: false
   }),
   props: [
-    "id",
-    "title",
-    "assets",
-    "description",
-    "image",
-    "articleName",
-    "articleURL",
-  ],
-};
+    'id',
+    'title',
+    'assets',
+    'description',
+    'image',
+    'articleName',
+    'articleURL'
+  ]
+}
 </script>

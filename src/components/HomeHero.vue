@@ -6,7 +6,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <p class="home-hero__notes">Illustration from 
+    <p class="home-hero__notes">Illustration from
       <a target=”_blank” rel=”noopener” href="https://mixkit.co/@adriannewalujo/">here</a>
     </p>
   </section>

@@ -12,19 +12,19 @@
 </template>
 
 <script>
-import BaseBadge from "../ui/BaseBadge.vue";
+import BaseBadge from '../ui/BaseBadge.vue'
 export default {
   components: { BaseBadge },
-  props: ["id", "title", "authors", "publisher", "year", "doi", "firstAuthor"],
-};
+  props: ['id', 'title', 'authors', 'publisher', 'year', 'doi', 'firstAuthor']
+}
 </script>
 
 <style scoped>
 li {
+  padding: 1rem;
   margin: 1rem 0;
   border: 1px solid #424242;
   border-radius: 12px;
-  padding: 1rem;
 }
 
 .product__data {

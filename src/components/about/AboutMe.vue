@@ -29,21 +29,20 @@
   </section>
 </template>
 <script>
-export default {};
+export default {}
 </script>
 <style lang="scss" scoped>
 .about-me {
   &__title {
-    text-align: left;
     font-size: 3.2rem;
+    text-align: left;
   }
   &__text {
     margin: 20px 20px 20px;
   }
   &__contents {
-    margin-top: 20px;
     justify-content: center;
-
+    margin-top: 20px;
     &-img {
       text-align: center;
     }

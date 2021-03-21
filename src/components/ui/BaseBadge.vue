@@ -8,8 +8,8 @@
 export default {
   props: ['title'],
   computed: {
-    text() {
-      return this.title.toUpperCase();
+    text () {
+      return this.title.toUpperCase()
     }
   }
 }
@@ -17,27 +17,27 @@ export default {
 
 <style scoped>
 .badge {
-  background-color: #ccc;
-  color: #252525;
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem;
   display: inline-block;
+  padding: 0.5rem 1.5rem;
   margin-right: 0.5rem;
   font-weight: bold;
+  color: #252525;
+  background-color: #ccc;
+  border-radius: 30px;
 }
 
 .firstauthor {
-  background-color: hsl(133, 100%, 30%);
   color: white;
+  background-color: hsl(133, 100%, 30%);
 }
 
 .backend {
-  background-color: #71008d;
   color: white;
+  background-color: #71008d;
 }
 
 .career {
-  background-color: #8d006e;
   color: white;
+  background-color: #8d006e;
 }
 </style>

@@ -1,42 +1,39 @@
 <template>
-<section class="my-timeline">
+  <section class="my-timeline">
     <div class="my-timeline__title">About My Career</div>
     <my-time-line-item class="my-timeline__contents"
-      v-for="tl in timeline"
-      :key="tl.id"
-      :year="tl.year"
-      :school="tl.school"
-      :description="tl.description"
-      :icon="tl.icon"
-      :color="tl.color"
-      :side="tl.side"
-    />
-</section>
+                       v-for="tl in timeline"
+                       :key="tl.id"
+                       :year="tl.year"
+                       :school="tl.school"
+                       :description="tl.description"
+                       :icon="tl.icon"
+                       :color="tl.color"
+                       :side="tl.side"/>
+  </section>
 </template>
 <script>
-import MyTimeLineItem from "./MyTimeLineItem.vue";
+import MyTimeLineItem from './MyTimeLineItem.vue'
 export default {
   components: {
-    MyTimeLineItem,
+    MyTimeLineItem
   },
   computed: {
-    timeline() {
-      return this.$store.getters["tl/timeline"];
-    },
-  },
-};
+    timeline () {
+      return this.$store.getters['tl/timeline']
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
-.my-timeline{
-  &__title{
+.my-timeline {
+  &__title {
+    font-size: 3.2rem;
     text-align: left;
-    font-size: 3.2rem
   }
-  &__contents{
-    margin-top:20px;
+  &__contents {
+    margin-top: 20px;
   }
 }
-.my-timeline__contents{
-  
-}
+
 </style>
