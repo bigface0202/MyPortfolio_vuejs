@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   &__card {
     background-color: #c3e2ff !important;
   }

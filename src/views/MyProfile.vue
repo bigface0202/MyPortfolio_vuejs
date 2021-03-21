@@ -1,17 +1,19 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col class="my-profile">
-        <about-me></about-me>
-        <about-my-skill></about-my-skill>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <my-time-line></my-time-line>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div class="profile">
+    <v-container fluid>
+      <v-row>
+        <v-col class="my-profile">
+          <about-me></about-me>
+          <about-my-skill></about-my-skill>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <my-time-line></my-time-line>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -28,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.my-profile {
-  margin: 10px 10px 10px;
+.profile {
+  background-color: #91c8fc;
 }
 </style>

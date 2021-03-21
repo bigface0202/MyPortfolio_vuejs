@@ -1,6 +1,6 @@
 <template>
   <section class="home">
-    <HomeHero/>
+    <home-hero/>
   </section>
 </template>
 <script>

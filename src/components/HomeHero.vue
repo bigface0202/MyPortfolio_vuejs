@@ -26,10 +26,6 @@
     font-size: 2.8rem;
     color: black;
     vertical-align: bottom;
-
-    // @include display_pc {
-    //   font-size: 40px;
-    // }
   }
 }
 
