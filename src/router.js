@@ -43,6 +43,11 @@ const router = new Router({
             name: 'works',
             path: '/works',
             component: require('@/views/MyWorks.vue').default
+        },
+        {
+            name: 'valorant',
+            path: '/valorant',
+            component: require('@/views/Valorant.vue').default
         }
     ]
 })
