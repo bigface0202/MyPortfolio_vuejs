@@ -52,7 +52,7 @@ const router = new Router({
     {
       name: 'valorant_study',
       path: '/valorant/study',
-      component: require('@/views/Valorant.vue').default
+      component: require('@/views/ValorantResearch.vue').default
     }
   ]
 })
