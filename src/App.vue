@@ -32,7 +32,7 @@ html {
     margin: 0;
   }
   &__content {
-    margin: 0 30vh;
+    margin: 0;
   }
 }
 

@@ -18,7 +18,13 @@ export default {
     },
     {
       name: 'VALORANT',
-      url: '/valorant'
+      url: '/valorant',
+      children: [
+        {
+          name: 'Study',
+          url: '/valorant/study'
+        }
+      ]
     }
   ]
 }
