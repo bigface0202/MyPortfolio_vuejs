@@ -21,6 +21,10 @@ export default {
       url: '/valorant',
       children: [
         {
+          name: 'Introduction',
+          url: '/valorant'
+        },
+        {
           name: 'Study',
           url: '/valorant/study'
         }
