@@ -86,6 +86,7 @@ export default {
         }
         &__vertical {
           position: relative;
+          z-index: 1;
           display: block;
           height: auto;
           padding: 20px;
