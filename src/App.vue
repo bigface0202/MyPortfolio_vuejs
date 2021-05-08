@@ -23,10 +23,6 @@ html {
   font-size: 20px;
 }
 
-.sidebar {
-  float: left;
-}
-
 .portfolio {
   &__header {
     margin: 0;

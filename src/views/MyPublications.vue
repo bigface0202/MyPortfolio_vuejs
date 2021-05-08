@@ -129,7 +129,5 @@ ul {
   padding: 0;
   margin: 2rem auto;
   list-style: none;
-
-  /* max-width: rem; */
 }
 </style>
