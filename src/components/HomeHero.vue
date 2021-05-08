@@ -12,6 +12,8 @@
   </section>
 </template>
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .home-hero__content {
   width: 100%;
   height: 75vh;
@@ -30,7 +32,9 @@
 }
 
 .home-hero__notes {
+  margin: 0;
   font-size: 0.5px;
   text-align: right;
+  background-color: $concept_lighten_color !important;
 }
 </style>

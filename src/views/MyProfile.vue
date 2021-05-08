@@ -30,7 +30,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .profile {
-  background-color: #91c8fc;
+  padding: 15px;
+  background-color: $concept_lighten_color !important;
 }
 </style>
