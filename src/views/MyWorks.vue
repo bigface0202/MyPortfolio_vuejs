@@ -1,9 +1,9 @@
 <template>
-  <section>
-    <v-sheet color="#91c8fc">
-      <v-slide-group multiple show-arrows>
-        <v-slide-item v-for="work in works" :key="work.id">
-          <v-card style=" width: 320px; height: 680px; margin: 20px 20px 20px 20px;" flat outlined>
+  <div class="myworks">
+    <v-sheet class="myworks__sheet">
+      <v-slide-group class="myworks__sheet__slide" multiple show-arrows>
+        <v-slide-item class="myworks__sheet__slide__item" v-for="work in works" :key="work.id">
+          <v-card class="myworks__sheet__slide__item__card" flat outlined>
             <v-img :src="work.image" max-height="320" max-width="320"></v-img>
             <v-card-title>{{ work.title }}</v-card-title>
             <v-card-subtitle>仕様：{{ work.assets }}</v-card-subtitle>
@@ -29,7 +29,7 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -46,11 +46,28 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.slide {
-  &__content {
-    width: 320px;
-    height: 700px;
-    margin: 20px 20px 20px;
+@import '@/assets/sass/colors.scss';
+
+.myworks {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  margin: 0;
+  background-color: $concept_lighten_color;
+  &__sheet {
+    &__slide {
+      margin: 0;
+      &__item {
+        margin: 0;
+        &__card {
+          width: 100%;
+          max-width: 320px;
+          height: 100%;
+          margin: 20px 20px 20px 20px;
+        }
+      }
+    }
   }
 }
+
 </style>

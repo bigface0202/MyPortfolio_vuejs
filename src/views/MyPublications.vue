@@ -3,8 +3,8 @@
     <v-container fluid>
       <ul>
         <v-row>
-          <v-col md=6>
-            <publication-filter @change-filter="setFilters"></publication-filter>
+          <v-col>
+            <publication-filter class="publications__filter" @change-filter="setFilters"></publication-filter>
           </v-col>
         </v-row>
         <v-row>
@@ -120,16 +120,24 @@ export default {
 }
 </script>
 
-<style scoped>
-.publications__content {
+<style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
+.publications {
   width: 100%;
+  padding: 15px;
+  background: $concept_lighten_color;
+  &__filter {
+    width: 100%;
+  }
+  &__content {
+    width: 100%;
+  }
 }
 
 ul {
   padding: 0;
   margin: 2rem auto;
   list-style: none;
-
-  /* max-width: rem; */
 }
 </style>

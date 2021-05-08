@@ -21,8 +21,11 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .valorant {
-  margin: 0;
+  padding: 15px;
+  background-color: $concept_lighten_color !important;
   &__img {
     &__valorant {
       width: 80%;
@@ -40,7 +43,7 @@
     }
   }
   &__text {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
     font-size: 1.2rem;
   }
 }

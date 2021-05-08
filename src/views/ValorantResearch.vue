@@ -14,8 +14,12 @@
 
 
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .vresearch {
   width: 100%;
+  padding: 15px;
+  background-color: $concept_lighten_color !important;
   &__title {
     margin: 10px;
   }

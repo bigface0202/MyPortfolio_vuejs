@@ -41,6 +41,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .nav {
   display: flex;
   align-items: center;
@@ -51,14 +53,16 @@ export default {
   &__list {
     display: flex;
     margin: 0;
+    color: $concept_color;
     list-style-type: none;
-    background-color: #c3e2ff !important;
+    background-color: $concept_lighten_color !important;
     &__items {
       margin: 0 20px;
       &--url {
         display: block;
         height: auto;
         padding: 20px;
+        color: $concept_color;
         text-decoration: none;
       }
       &__vertical {
@@ -75,14 +79,14 @@ export default {
           display: none;
           padding: 0;
           list-style-type: none;
-          background-color: #007db9;
+          background-color: $concept_color;
           &__items {
-            width: 250px;
-            border-bottom: 1px solid #fff;
+            width: 150px;
+            border-bottom: 1px solid $concept_lighten_color;
             &--url {
               display: block;
               padding: 10px;
-              color: #fff;
+              color: $concept_lighten_color;
               text-decoration: none;
             }
           }

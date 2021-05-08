@@ -1,21 +1,23 @@
 <template>
-  <v-card flat>
-    <v-card-title>Find My Publications</v-card-title>
-    <v-card-text >
-      <span class="filter-option">
-        <input type="checkbox" id="paper" checked @change="setFilter" />
-        <label for="paper">Journal Paper (International)</label>
-      </span>
-      <span class="filter-option">
-        <input type="checkbox" id="conf_i" checked @change="setFilter" />
-        <label for="conf_i">Conference Paper (International)</label>
-      </span>
-      <span class="filter-option">
-        <input type="checkbox" id="conf_j" checked @change="setFilter" />
-        <label for="conf_j">Conference Paper (Japanese)</label>
-      </span>
-    </v-card-text>
-  </v-card>
+  <div class="publications-filter">
+    <v-card flat>
+      <v-card-title>Find My Publications</v-card-title>
+      <v-card-text >
+        <span class="publications-filter__option">
+          <input class="publication-filter__option__input" type="checkbox" id="paper" checked @change="setFilter" />
+          <label class="publication-filter__option__label" for="paper">Journal Paper (International)</label>
+        </span>
+        <span class="publications-filter__option">
+          <input class="publication-filter__option__input" type="checkbox" id="conf_i" checked @change="setFilter" />
+          <label class="publication-filter__option__label" for="conf_i">Conference Paper (International)</label>
+        </span>
+        <span class="publications-filter__option">
+          <input class="publication-filter__option__input" type="checkbox" id="conf_j" checked @change="setFilter" />
+          <label class="publication-filter__option__label" for="conf_j">Conference Paper (Japanese)</label>
+        </span>
+      </v-card-text>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -45,25 +47,17 @@ export default {
 }
 </script>
 
-<style scoped>
-h2 {
-  margin: 0.5rem 0;
-}
-
-.filter-option {
-  margin-right: 1rem;
-}
-
-.filter-option label,
-.filter-option input {
-  vertical-align: middle;
-}
-
-.filter-option label {
-  margin-left: 0.25rem;
-}
-
-.filter-option.active label {
-  font-weight: bold;
+<style lang="scss" scoped>
+.publications-filter {
+  &__option {
+    margin-right: 1rem;
+    &__label {
+      vertical-align: middle;
+    }
+    &__input {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
 }
 </style>

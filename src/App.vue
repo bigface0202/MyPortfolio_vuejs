@@ -4,30 +4,37 @@
     <div class="portfolio__content">
       <router-view />
     </div>
+    <original-footer/>
   </v-app>
 </template>
 
 <script>
 import OriginalHeader from '@/components/common/header/header.vue'
+import OriginalFooter from '@/components/common/footer.vue'
 
 export default {
   components: {
-    OriginalHeader
+    OriginalHeader,
+    OriginalFooter
   }
 }
 </script>
 
 <style lang="scss">
-html {
-  font-family: sans-serif;
-  font-size: 20px;
-}
+@import '@/assets/sass/colors.scss';
 
-.sidebar {
-  float: left;
+html {
+  font-size: 20px;
+  background-color: $concept_color !important;
 }
 
 .portfolio {
+  padding: 5px;
+  margin: 50px 50px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
   &__header {
     margin: 0;
   }
@@ -38,5 +45,9 @@ html {
 
 #app {
   font-family: 'Noto Sans JP', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.v-application--wrap {
+  min-height: 100%;
 }
 </style>

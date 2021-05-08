@@ -1,13 +1,9 @@
 <template>
   <header class="header">
-    <v-card class="header__card" flat>
-      <v-card-title class="text-center justify-center py-6">
-        <p class="header__title__text">
-          y-kissy
-        </p>
-      </v-card-title>
-      <navigation class="header__nav" />
-    </v-card>
+    <h1 class="header__title">
+      y-kissy
+    </h1>
+    <navigation class="header__nav" />
   </header>
 </template>
 
@@ -29,18 +25,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/sass/colors.scss';
+
 .header {
   width: 100%;
-  font-size: 1rem;
-  &__card {
-    background-color: #c3e2ff !important;
-  }
+  font-weight: bold;
+  background-color: $concept_lighten_color !important;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
   &__title {
+    margin: 50px 0;
+    color: $concept_color;
     text-align: center;
-    background-color: #c3e2ff !important;
-    &__text {
-      color: #4a47a3 !important;
-    }
   }
   &__nav {
     margin: 0;
