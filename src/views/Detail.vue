@@ -2,8 +2,8 @@
   <div class="profile">
     <v-container fluid>
       <v-row>
-        <v-col class="my-profile">
-          <about-my-skill></about-my-skill>
+        <v-col >
+          <my-skill></my-skill>
         </v-col>
       </v-row>
       <v-row>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import MyTimeLine from '@/components/timeline/MyTimeLine.vue'
-import AboutMySkill from '../components/about/AboutMySkill.vue'
+import MyTimeLine from '@/components/detail/timeline/timeline.vue'
+import MySkill from '@/components/detail/skill.vue'
 export default {
   components: {
     MyTimeLine,
-    AboutMySkill
+    MySkill
   }
 }
 </script>

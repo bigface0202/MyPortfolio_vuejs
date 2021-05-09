@@ -32,7 +32,7 @@ const router = new Router({
     {
       name: 'detail',
       path: '/detail',
-      component: require('@/views/MyProfile.vue').default
+      component: require('@/views/Detail.vue').default
     },
     {
       name: 'publications',
