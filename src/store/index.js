@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import publicationsModule from '@/store/modules/publications.js'
 import timeLineModule from '@/store/modules/timeline.js'
 import works from '@/store/modules/works.js'
+import skills from '@/store/modules/skills.js'
 
 Vue.use(Vuex)
 
@@ -11,6 +12,7 @@ export default new Vuex.Store({
   modules: {
     pubs: publicationsModule,
     tl: timeLineModule,
-    works: works
+    works: works,
+    skills: skills
   }
 })
