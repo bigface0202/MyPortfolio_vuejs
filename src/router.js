@@ -30,8 +30,8 @@ const router = new Router({
       component: require('@/views/Home.vue').default
     },
     {
-      name: 'profile',
-      path: '/profile',
+      name: 'detail',
+      path: '/detail',
       component: require('@/views/MyProfile.vue').default
     },
     {
