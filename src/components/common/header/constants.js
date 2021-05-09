@@ -5,8 +5,8 @@ export default {
       url: '/home'
     },
     {
-      name: 'PROFILE',
-      url: '/profile'
+      name: 'DETAIL',
+      url: '/detail'
     },
     {
       name: 'PUBLICATIONS',

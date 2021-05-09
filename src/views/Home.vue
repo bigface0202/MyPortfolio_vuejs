@@ -1,14 +1,14 @@
 <template>
   <section class="home">
-    <home-hero/>
+    <home-profile/>
   </section>
 </template>
 <script>
-import HomeHero from '@/components/HomeHero.vue'
+import HomeProfile from '@/components/home/profile.vue'
 
 export default {
   components: {
-    HomeHero
+    HomeProfile
   }
 }
 </script>
