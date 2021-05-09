@@ -2,41 +2,22 @@
   <div class="skill">
     <h2 class="skill__title">About My Skill</h2>
     <section class="skill__contents">
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/python.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">Python</h3>
-        <p class="skill__contents__card__text">3年以上</p>
-      </div>
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/flutter.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">Flutter</h3>
-        <p class="skill__contents__card__text">1年以上</p>
-      </div>
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/vuejs.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">Vue.js</h3>
-        <p class="skill__contents__card__text">1ヶ月程度</p>
-      </div>
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/unity.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">Unity</h3>
-        <p class="skill__contents__card__text">半年程度</p>
-      </div>
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/handa.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">電子工作</h3>
-        <p class="skill__contents__card__text">3年以上</p>
-      </div>
-      <div class="skill__contents__card">
-        <v-img :src="require('@/assets/img/shikaku.png')"  class="skill__contents__card__icon" />
-        <h3 class="skill__contents__card__text">基本情報技術者</h3>
-        <p class="skill__contents__card__text">資格</p>
+      <div class="skill__contents__card" v-for="skill in skills" :key="skill.id">
+        <v-img :src="skill.icon"  class="skill__contents__card__icon" />
+        <h3 class="skill__contents__card__text">{{ skill.asset }}</h3>
+        <p class="skill__contents__card__text">{{ skill.description }}</p>
       </div>
     </section>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  computed: {
+    skills () {
+      return this.$store.getters['skills/skills']
+    }
+  }
+}
 </script>
 <style lang="scss" scoped>
 @import '@/assets/sass/colors.scss';

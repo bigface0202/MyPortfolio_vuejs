@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import MyTimeLine from '@/components/detail/timeline/timeline.vue'
+import MyTimeLine from '@/components/detail/timeline.vue'
 import MySkill from '@/components/detail/skill.vue'
 export default {
   components: {
